@@ -1,7 +1,7 @@
 const card = document.querySelector(".card");
 const ratingSide = document.querySelector(".rating");
-const thanksSide = document.querySelector(".thanks");
 const buttonsList = document.getElementsByTagName("li");
+const textRating = document.getElementById("rated");
 const submitButton = document.getElementById("submit");
 
 
@@ -20,7 +20,8 @@ for (let i = 0; i < buttonsList.length; i++) {
         }
         submitButton.addEventListener("click", () => {
             ratingSide.remove();
-            card.classList.add("rotate")
+            textRating.textContent = `You selected ${i + 1} out of 5`
+            card.classList.add("rotate");
         });
     });
 }
