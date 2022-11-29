@@ -18,6 +18,8 @@ for (let i = 0; i < buttonsList.length; i++) {
                 buttonsList[j].classList.remove("clicked-li");
             }
         }
+
+        // Display the thanks side of the card after clicking on the submit button when a number has been chosen
         submitButton.addEventListener("click", () => {
             ratingSide.remove();
             textRating.textContent = `You selected ${i + 1} out of 5`
